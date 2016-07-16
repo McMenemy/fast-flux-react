@@ -36,5 +36,7 @@ then do FastFlux.webCycle(method, url, options)
  };
  
  FastFlux.webCycle('post', '/signup', {
+ 
    body: signUpBody,
+ 
  });
