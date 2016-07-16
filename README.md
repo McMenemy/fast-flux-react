@@ -25,6 +25,7 @@ then do FastFlux.webCycle(method, url, options)
 
  example
  
+ ```javascript
  var signUpBody = {
  
    username: this.state.username,
@@ -40,3 +41,4 @@ then do FastFlux.webCycle(method, url, options)
    body: signUpBody,
  
  });
+```
