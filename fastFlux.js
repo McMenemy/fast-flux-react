@@ -17,7 +17,7 @@ var ApiUtil = {
       success:
         function (resp) {
           options.success(resp, 'get', url);
-          if (options.shouldReceive) ActionUtil.receiveData(resp, options.storeActionType);
+          if (options.shouldStoreReceive) ActionUtil.receiveData(resp, options.storeActionType);
         },
 
       error:
@@ -36,7 +36,7 @@ var ApiUtil = {
       success:
         function (resp) {
           options.success(resp, 'post', url);
-          if (options.shouldReceive) ActionUtil.receiveData(resp, options.storeActionType);
+          if (options.shouldStoreReceive) ActionUtil.receiveData(resp, options.storeActionType);
         },
 
       error:
@@ -55,7 +55,7 @@ var ApiUtil = {
       success:
         function (resp) {
           options.success(resp, 'put', url);
-          if (options.shouldReceive) ActionUtil.receiveData(resp, options.storeActionType);
+          if (options.shouldStoreReceive) ActionUtil.receiveData(resp, options.storeActionType);
         },
 
       error:
@@ -76,7 +76,7 @@ var errorDefault = function (resp, method, url) {
 
 module.exports = {
   webCycle: function (method, url, options) {
-    options.shouldReceive = options.shouldReceive || false;
+    options.shouldStoreReceive = options.shouldStoreReceive || false;
     options.success = options.success || successDefault;
     options.error = options.error || errorDefault;
     if (method === 'post' || method === 'put') {
