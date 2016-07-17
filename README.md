@@ -15,13 +15,13 @@ then do FastFlux.webCycle(method, url, options)
     
         body: object (data to be sent in AJAX, required for post and put requests)
         
-        success: function    (optional front end successCallback)
+        success: function    (optional front end successCallback console logs succes message by default)
         
-        error: function      (optional front end errorCallback)
+        error: function      (optional front end errorCallback console logs error message by default)
         
-        shouldReceive: boolean  (if the backend data should end up in a store)
+        shouldStoreReceive: boolean  (if the backend data should end up in a store)
         
-        type: the name of the store action that received data (required if shouldReceive is true)
+        storeActionType: the name of the store action that received data (required if shouldReceive is true)
 
  example
  
